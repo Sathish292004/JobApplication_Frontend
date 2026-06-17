@@ -26,6 +26,7 @@ const initial = {
   postDesc: "",
 };
 
+const API_URL = "https://jobapplication-backend-postgres.onrender.com";
 const Edit = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ const Edit = () => {
     const fetchJob = async () => {
       try {
         const response = await axios.get(
-            `http://localhost:8080/jobPost/${currId}`
+            `${API_URL}/jobPost/${currId}`
         );
         setForm(response.data);
       } catch (error) {
@@ -53,7 +54,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-          "http://localhost:8080/jobPost",
+          `${API_URL}/jobPost`,
           form
       );
 

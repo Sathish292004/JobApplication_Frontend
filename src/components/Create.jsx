@@ -17,6 +17,8 @@ import DescriptionIcon from "@mui/icons-material/Description";
 
 import { useNavigate } from "react-router-dom";
 
+const API_URL = "https://jobapplication-backend-postgres.onrender.com";
+
 const initial = {
     postId: "",
     postProfile: "",
@@ -44,7 +46,7 @@ const Create = () => {
         e.preventDefault();
 
         axios
-            .post("http://localhost:8080/jobPost", form)
+            .post(`${API_URL}/jobPost`, form)
             .then((resp) => {
                 console.log(resp.data);
                 navigate("/");

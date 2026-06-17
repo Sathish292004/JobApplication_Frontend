@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import SearchIcon from "@mui/icons-material/Search";
@@ -15,10 +14,9 @@ import {
     TextField,
     InputAdornment,
     Chip,
-    Stack,
     IconButton,
 } from "@mui/material";
-
+const API_URL = "https://jobapplication-backend-postgres.onrender.com";
 const AllPosts = () => {
     const [query, setQuery] = useState("");
     const [post, setPost] = useState([]);
@@ -32,7 +30,7 @@ const AllPosts = () => {
         const fetchPosts = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:8080/jobPosts/keyword/${query}`
+                    `${API_URL}/jobPosts/keyword/${query}`
                 );
                 setPost(response.data);
             } catch (error) {
@@ -43,7 +41,7 @@ const AllPosts = () => {
         const fetchInitialPosts = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:8080/jobPosts"
+                    `${API_URL}/jobPosts`
                 );
                 setPost(response.data);
             } catch (error) {
@@ -61,7 +59,7 @@ const AllPosts = () => {
     const handleDelete = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:8080/jobPost/${id}`
+                `${API_URL}/jobPost/${id}`
             );
 
             setPost(
