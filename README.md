@@ -34,8 +34,17 @@ src/
 
 ```bash
 git clone https://github.com/Sathish292004/JobApplication_Frontend.git
+```
+
+```bash
 cd JobApplication_Frontend
+```
+
+```bash
 npm install
+```
+
+```bash
 npm start
 ```
 
