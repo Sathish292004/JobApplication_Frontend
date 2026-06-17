@@ -2,6 +2,13 @@
 
 A modern and responsive Job Portal frontend built using React, Material UI, Axios, and React Router. The application allows users to view, search, add, update, and delete job postings through an intuitive user interface connected to a Spring Boot REST API backend.
 
+## 🌐 Live Demo
+
+💻 **Frontend:** https://job-portal-three-lemon.vercel.app/
+
+⚙️ **Backend API:** https://github.com/Sathish292004/JobApplication_Backend.git
+
+
 ## 🚀 Features
 
 * View all job postings
