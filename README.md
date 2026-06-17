@@ -62,6 +62,10 @@ The frontend communicates with the Spring Boot backend REST API for managing job
 
 ## 👨‍💻 Author
 
-**Sathish Kumar B**
+### Sathish Kumar B
 
 🔗 GitHub: https://github.com/Sathish292004
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
