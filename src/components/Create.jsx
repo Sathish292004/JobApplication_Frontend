@@ -28,16 +28,6 @@ const initial = {
 };
 
 const Create = () => {
-    const skillSet = [
-        "JavaScript",
-        "Java",
-        "Python",
-        "Django",
-        "Rust",
-        "React",
-        "Spring",
-        "SQL",
-    ];
 
     const navigate = useNavigate();
     const [form, setForm] = useState(initial);
@@ -54,22 +44,6 @@ const Create = () => {
             .catch((error) => {
                 console.log(error);
             });
-    };
-
-    const toggleSkill = (skill) => {
-        if (form.postTechStack.includes(skill)) {
-            setForm({
-                ...form,
-                postTechStack: form.postTechStack.filter(
-                    (s) => s !== skill
-                ),
-            });
-        } else {
-            setForm({
-                ...form,
-                postTechStack: [...form.postTechStack, skill],
-            });
-        }
     };
 
     return (
