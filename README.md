@@ -114,7 +114,7 @@ To change the API base URL, update the Axios configuration in your component/ser
 
 The frontend is deployed on **Vercel**.
 
-To deploy your own instance:
+To deploy your own instance: xxxxxxxx
 
 ```bash
 npm run build
